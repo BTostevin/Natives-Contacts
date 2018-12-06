@@ -1,4 +1,4 @@
-import { Contant } from './contact';
+import { Contact } from './contact';
 
 export const CONTACTS: Contact[] = [
     { name: 'Batman', 

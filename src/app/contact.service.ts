@@ -15,7 +15,9 @@ export class ContactService {
   constructor(private messageService: MessageService) { }
   
   getContacts(): Observable<Contact[]> {
-    this.messageService.add('ContactService: fetched contacts');
+    //this.messageService.clear();
+    //this.messageService.add('ContactService: //fetched contacts');
     return of(CONTACTS);
+    
   }
 }
