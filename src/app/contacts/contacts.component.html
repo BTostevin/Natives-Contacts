@@ -6,13 +6,14 @@
     <span class="badge">{{contact.name}}</span> {{contact.primary}}
   </li>
 </ul>
- 
 
-<div *ngIf="selectedContact">
- 
+
+<!-- allows ability to edit contact if clicked last-->
+<div *ngIf="selectedContact"> 
   <h2>{{selectedContact.name | uppercase}} Details</h2>
   <div>
     <label>name:
+<!-- details of each contact can be edited using the input box -->
       <input [(ngModel)]="selectedContact.name" placeholder="name">
     </label>
   </div>
@@ -34,34 +35,4 @@
       <input [(ngModel)]="selectedContact.primary" placeholder="primary">
     </label>
   </div>
- 
 </div>
-
-
-<!--
-
-<div class="well clearfix">
-	<fieldset class="scheduler-border">
-	 <legend class="scheduler-border">Add Contact</legend>
-	   <form class="form-inline">
-		 <div class="form-group">
-		   <label for="exampleInputName">Name</label>
-		   <input type="text" class="form-control" id="exampleInputName" ng-model="name" placeholder="name">
-		 </div>
-		<div class="form-group">
-		  <label for="exampleInputEmail">Email</label>
-		  <input type="text" class="form-control" id="exampleInputEmail" ng-model="email" placeholder="email"/>
-		</div>
-		<div class="form-group">
-		  <label for="exampleInputLocation">Location</label>
-		  <input type="text" class="form-control" id="exampleInputLocation" ng-model="location" placeholder="location">
-		</div>
-        <div class="form-group">
-          <label for="exampleInputPrimary">Primary</label>
-          <input type="text" class="form-control" id="exampleInputPrimary" ng-model="primary" placeholder="primary">
-		</div>
-		<button type="button" class="btn btn-primary" ng-click="addContact()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add Contact</button>
-	  </form>
-	</fieldset>
-</div>
--->
