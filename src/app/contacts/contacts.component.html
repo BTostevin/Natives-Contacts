@@ -1,8 +1,34 @@
-{{contact.name}}
 
 
-<div>
-  <label>name:
-    <input [(ngModel)]="contact.name" placeholder="name">
-  </label>
+
+
+<!--
+<ul class="contacts">
+    <li *ngFor="let contact of contacts" (click)="onSelect(contact)">
+        name: {{contact.name}}. location: {{contact.location}}. email: {{contact.email}}. primary: {{contact.primary}}.
+    </li>
+</ul>
+-->
+
+
+
+<h2>My Contacts</h2>
+<ul class="contacts">
+  <li *ngFor="let contact of contacts"
+    [class.selected]="contact === selectedContact"
+    (click)="onSelect(contact)">
+    <span class="badge">{{contact.name}}</span> {{contact.email}}. {{contact.location}}. {{contact.primary}}.
+  </li>
+</ul>
+ 
+<div *ngIf="selectedContact">
+ 
+  <h2>{{selectedContact.name | uppercase}} Details</h2>
+  <div><span>location: </span>{{selectedContact.location}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedContact.name" placeholder="name">
+    </label>
+  </div>
+ 
 </div>
