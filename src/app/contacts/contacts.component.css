@@ -1,47 +1,52 @@
 .selected {
-  background-color: #CFD8DC !important;
+  background-color: #FED0BB;
   color: white;
 }
 .contacts {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 20em;
 }
 .contacts li {
+  font-family: Helvetica, Arial, sans-serif;
   cursor: pointer;
   position: relative;
   left: 0;
-  background-color: #EEE;
+  background-color: #6FFFE9;
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
   border-radius: 4px;
 }
+.contacts li.selected {
+    background-color: #5BC0BE;
+}
 .contacts li.selected:hover {
-  background-color: #BBD8DC !important;
+  background-color: #5BC0BE;
   color: white;
 }
 .contacts li:hover {
   color: #607D8B;
-  background-color: #DDD;
+  background-color: #5BC0BE;
   left: .1em;
 }
 .contacts .text {
   position: relative;
   top: -3px;
 }
-.contacts .badge {
+.contacts .contact_name {
   display: inline-block;
   font-size: small;
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
+  background-color: #1C2541;
   line-height: 1em;
   position: relative;
   left: -1px;
-  top: -4px;
-  height: 1.8em;
+  top: -5px;
+  height: 1.9em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
+  min-width: 8em;
 }
