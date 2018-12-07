@@ -1,14 +1,15 @@
-<div *ngIf="contact" class="details">
+<div *ngIf="contact">
 
-  <h2>{{contact.name | uppercase}} Details</h2>
-  <div><span>email: </span>{{contact.email}}</div>
-  <div><span>location: </span>{{contact.location}}</div>
-  <div><span>primary: </span>{{contact.primary}}</div>
-
+  <h2 class="details">{{contact.name | uppercase}} Details</h2>
   <div>
     <label>name:
       <input [(ngModel)]="contact.name" placeholder="name"/>
     </label>
   </div>
+  <div><span>email: </span>{{contact.email}}</div>
+  <div><span>location: </span>{{contact.location}}</div>
+  <div><span>primary: </span>{{contact.primary}}</div>
+
+
 
 </div>

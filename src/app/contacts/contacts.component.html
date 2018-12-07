@@ -6,30 +6,29 @@
   </li>
 </ul>
 
-
 <!-- allows ability to edit contact if clicked last-->
 <div *ngIf="selectedContact"> 
-  <h2>{{selectedContact.name | uppercase}} Details</h2>
-  <div>
+  <h2 class="details">{{selectedContact.name | uppercase}} Details</h2>
+    
+  <div class="edit_field">
     <label>name:
-<!-- details of each contact can be edited using the input box -->
       <input [(ngModel)]="selectedContact.name" placeholder="name">
     </label>
   </div>
     
-  <div>
+  <div class="edit_field">
     <label>email:
       <input [(ngModel)]="selectedContact.email" placeholder="email">
     </label>
   </div>
     
-  <div>
+  <div class="edit_field">
     <label>location:
       <input [(ngModel)]="selectedContact.location" placeholder="location">
     </label>
   </div>
     
-  <div>
+  <div class="edit_field">
     <label>primary:
       <input [(ngModel)]="selectedContact.primary" placeholder="primary">
     </label>

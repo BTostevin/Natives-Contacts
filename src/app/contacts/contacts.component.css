@@ -1,3 +1,13 @@
+.details {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #0B132B
+}
+
+.edit_field {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 4px;
+}
+
 .selected {
   background-color: #FED0BB;
   color: white;
